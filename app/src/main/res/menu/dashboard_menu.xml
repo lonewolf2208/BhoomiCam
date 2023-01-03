@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/homePage"
+        android:title="Home"
+        android:icon="@drawable/home_selection"/>
+
+    <item android:id="@+id/droneServiesPage"
+        android:title="Drone Services"
+        android:icon="@drawable/drone_services_selection"/>
+    <item android:id="@+id/ordersPage"
+        android:title="Orders"
+        android:icon="@drawable/order_selection"/>
+    <item android:id="@+id/profilePage"
+        android:title="Profile"
+        android:icon="@drawable/profile_selection" />
+</menu>

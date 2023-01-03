@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dashboard_navigation"
+    app:startDestination="@id/homePage">
+
+    <fragment
+        android:id="@+id/droneServiesPage"
+        android:name="com.example.bhoomicam.view.dashboard.DroneServiesPage"
+        android:label="fragment_drone_servies_page"
+        tools:layout="@layout/fragment_drone_servies_page" />
+    <fragment
+        android:id="@+id/homePage"
+        android:name="com.example.bhoomicam.view.dashboard.HomePage"
+        android:label="fragment_home_page"
+        tools:layout="@layout/fragment_home_page" />
+    <fragment
+        android:id="@+id/ordersPage"
+        android:name="com.example.bhoomicam.view.dashboard.OrdersPage"
+        android:label="fragment_orders_page"
+        tools:layout="@layout/fragment_orders_page" />
+    <fragment
+        android:id="@+id/profilePage"
+        android:name="com.example.bhoomicam.view.dashboard.ProfilePage"
+        android:label="fragment_profile_page"
+        tools:layout="@layout/fragment_profile_page" />
+</navigation>
