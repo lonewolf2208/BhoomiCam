@@ -25,4 +25,18 @@
         android:name="com.example.bhoomicam.view.dashboard.ProfilePage"
         android:label="fragment_profile_page"
         tools:layout="@layout/fragment_profile_page" />
+    <fragment
+        android:id="@+id/orderDetailsPage"
+        android:name="com.example.bhoomicam.view.dashboard.OrderDetailsPage"
+        android:label="fragment_order_details_page"
+        tools:layout="@layout/fragment_order_details_page" />
+    <fragment
+        android:id="@+id/orderBookingPage"
+        android:name="com.example.bhoomicam.view.dashboard.OrderBookingPage"
+        android:label="fragment_order_booking_page"
+        tools:layout="@layout/fragment_order_booking_page" >
+        <action
+            android:id="@+id/action_orderBookingPage_to_orderDetailsPage"
+            app:destination="@id/orderDetailsPage" />
+    </fragment>
 </navigation>

@@ -5,13 +5,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".view.dashboard.DashboardActivity">
+
     <include
         android:id="@+id/include"
         layout="@layout/toolbar_layout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></include>
-
+        app:layout_constraintTop_toTopOf="parent" />
+    <View
+        android:id="@+id/view118"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:background="#8BC53F"
+        android:backgroundTint="#8BC53F"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -34,6 +43,11 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
             app:menu="@menu/dashboard_menu" />
+
+        <View
+            android:id="@+id/view8"
+            android:layout_width="wrap_content"
+            android:layout_height="565dp" />
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -204,7 +204,7 @@
         app:layout_constraintTop_toBottomOf="@+id/OtpContainer" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/button7"
+        android:id="@+id/SingnUpButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -229,10 +229,10 @@
         android:fontFamily="@font/satoshi_variable"
         android:text="Already have an account ?"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button7" />
+        app:layout_constraintTop_toBottomOf="@+id/SingnUpButton" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/LogInPage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="2dp"
@@ -241,7 +241,7 @@
         android:text="Login "
         android:textColor="#8BC53F"
         app:layout_constraintStart_toEndOf="@+id/textView7"
-        app:layout_constraintTop_toBottomOf="@+id/button7" />
+        app:layout_constraintTop_toBottomOf="@+id/SingnUpButton" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button9"
@@ -249,6 +249,7 @@
         android:layout_height="0dp"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="1dp"
+        android:layout_marginBottom="-5dp"
         android:text="Send OTP"
         android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="@+id/PhoneNumberContainer"
