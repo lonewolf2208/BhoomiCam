@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/dark_green">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Register your profile"
+                android:textColor="@color/black"
+                android:textSize="17dp"
+                />
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <TextView
+            android:id="@+id/text_view_select_language"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select your language"
+            android:layout_centerHorizontal="true"
+            android:textSize="16dp"
+            android:layout_below="@id/toolbar_"
+            android:textColor="@color/black"
+            android:layout_marginTop="20dp"
+            />
+
+
+        <!--   selecting your language-->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/text_view_select_language"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="30dp"
+            >
+
+            <!--       // this is for selecting english button-->
+            <Button
+                android:id="@+id/english_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="English"
+                android:textColor="@color/white"
+                android:background="@drawable/selected_button"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                />
+
+            <!--       // this is for selecting hindi language -->
+            <Button
+                android:id="@+id/hindi_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hindi"
+                android:background="@drawable/unselected_button"
+                android:textColor="@color/white"
+                android:layout_below="@id/english_button"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+            />
+
+            <!--         for telegu button-->
+            <Button
+                android:id="@+id/telegu_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Telegu"
+                android:background="@drawable/unselected_button"
+                android:textColor="@color/white"
+                android:layout_below="@id/hindi_button"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                />
+
+            <!--            malyalam button-->
+            <Button
+                android:id="@+id/malyalam_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Malyalam"
+                android:background="@drawable/unselected_button"
+                android:textColor="@color/white"
+                android:layout_below="@id/telegu_button"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                />
+
+            <!--              // panjabi button-->
+            <Button
+                android:id="@+id/panjabi_button_"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Panjabi"
+                android:background="@drawable/unselected_button"
+                android:textColor="@color/white"
+                android:layout_below="@id/malyalam_button"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                />
+
+            <!--              // assamese button -->
+            <Button
+                android:id="@+id/assamese_button_"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Assamese"
+                android:background="@drawable/unselected_button"
+                android:textColor="@color/white"
+                android:layout_below="@id/panjabi_button_"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                />
+
+
+        </RelativeLayout>
+
+        <!--   &lt;!&ndash; set user preferences &ndash;&gt;-->
+        <!--            <TextView-->
+        <!--                 android:id="@+id/name_id"-->
+        <!--                 android:layout_width="wrap_content"-->
+        <!--                 android:layout_height="wrap_content"-->
+        <!--                 android:text="Your name"-->
+        <!--                 android:textSize="13dp"-->
+        <!--                 android:textColor="@color/black"-->
+        <!--                 android:layout_below="@id/english_button"-->
+        <!--                 android:layout_marginTop="30dp"-->
+        <!--                 android:layout_marginLeft="50dp"-->
+        <!--            />-->
+        <!--       -->
+        <!--           <EditText-->
+        <!--               android:id="@+id/edit_text_name"-->
+        <!--               android:layout_width="wrap_content"-->
+        <!--               android:layout_height="15dp"-->
+        <!--                  android:layout_below="@id/name_id"-->
+        <!--                  android:hint="Enter name"-->
+        <!--                  android:textColor="@color/black"-->
+        <!--                  android:layout_marginTop="5dp"-->
+        <!--                  android:layout_marginLeft="50dp"-->
+        <!--                  android:textSize="14dp"/>-->
+        <!--       -->
+        <!--&lt;!&ndash;       //  for district selection&ndash;&gt;-->
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/KUNAL/AndroidStudioProjects/BhoomiCam/app/src/main/res/drawable/circular_image.xml" value="0.1835" />
         <entry key="..\:/Users/KUNAL/AndroidStudioProjects/BhoomiCam/app/src/main/res/drawable/drone_services_selection.xml" value="0.1835" />
         <entry key="..\:/Users/KUNAL/AndroidStudioProjects/BhoomiCam/app/src/main/res/drawable/home_card_gradient.xml" value="0.1835" />
         <entry key="..\:/Users/KUNAL/AndroidStudioProjects/BhoomiCam/app/src/main/res/drawable/home_selection.xml" value="0.1835" />
@@ -23,8 +24,11 @@
         <entry key="..\:/Users/KUNAL/AndroidStudioProjects/BhoomiCam/app/src/main/res/font/fonts.xml" value="0.2791666666666667" />
         <entry key="..\:/Users/KUNAL/AndroidStudioProjects/BhoomiCam/app/src/main/res/layout/activity_dashboard.xml" value="0.2359375" />
         <entry key="..\:/Users/KUNAL/AndroidStudioProjects/BhoomiCam/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/KUNAL/AndroidStudioProjects/BhoomiCam/app/src/main/res/layout/activity_map.xml" value="0.25" />
+        <entry key="..\:/Users/KUNAL/AndroidStudioProjects/BhoomiCam/app/src/main/res/layout/activity_payment.xml" value="0.25" />
         <entry key="..\:/Users/KUNAL/AndroidStudioProjects/BhoomiCam/app/src/main/res/layout/card_drone_services.xml" value="0.24895833333333334" />
         <entry key="..\:/Users/KUNAL/AndroidStudioProjects/BhoomiCam/app/src/main/res/layout/card_home_layout.xml" value="0.24895833333333334" />
+        <entry key="..\:/Users/KUNAL/AndroidStudioProjects/BhoomiCam/app/src/main/res/layout/crop_detail.xml" value="0.10989583333333333" />
         <entry key="..\:/Users/KUNAL/AndroidStudioProjects/BhoomiCam/app/src/main/res/layout/drone_data.xml" value="0.264" />
         <entry key="..\:/Users/KUNAL/AndroidStudioProjects/BhoomiCam/app/src/main/res/layout/fragment_choose_lang.xml" value="0.264" />
         <entry key="..\:/Users/KUNAL/AndroidStudioProjects/BhoomiCam/app/src/main/res/layout/fragment_create_password.xml" value="0.25" />
@@ -35,12 +39,13 @@
         <entry key="..\:/Users/KUNAL/AndroidStudioProjects/BhoomiCam/app/src/main/res/layout/fragment_order_booking_page.xml" value="0.25" />
         <entry key="..\:/Users/KUNAL/AndroidStudioProjects/BhoomiCam/app/src/main/res/layout/fragment_order_details_page.xml" value="0.25" />
         <entry key="..\:/Users/KUNAL/AndroidStudioProjects/BhoomiCam/app/src/main/res/layout/fragment_orders_page.xml" value="0.25" />
-        <entry key="..\:/Users/KUNAL/AndroidStudioProjects/BhoomiCam/app/src/main/res/layout/fragment_profile_page.xml" value="0.25" />
+        <entry key="..\:/Users/KUNAL/AndroidStudioProjects/BhoomiCam/app/src/main/res/layout/fragment_profile_page.xml" value="0.264" />
         <entry key="..\:/Users/KUNAL/AndroidStudioProjects/BhoomiCam/app/src/main/res/layout/fragment_sign_up.xml" value="0.25" />
         <entry key="..\:/Users/KUNAL/AndroidStudioProjects/BhoomiCam/app/src/main/res/layout/fragment_splash_screen.xml" value="0.2359375" />
         <entry key="..\:/Users/KUNAL/AndroidStudioProjects/BhoomiCam/app/src/main/res/layout/fragment_welcome_page.xml" value="0.25" />
         <entry key="..\:/Users/KUNAL/AndroidStudioProjects/BhoomiCam/app/src/main/res/layout/orders_card.xml" value="0.24895833333333334" />
         <entry key="..\:/Users/KUNAL/AndroidStudioProjects/BhoomiCam/app/src/main/res/layout/toolbar_layout.xml" value="0.264" />
+        <entry key="..\:/Users/KUNAL/AndroidStudioProjects/BhoomiCam/app/src/main/res/menu/crop_cover_on_ground.xml" value="0.10989583333333333" />
         <entry key="..\:/Users/KUNAL/AndroidStudioProjects/BhoomiCam/app/src/main/res/menu/dashboard_menu.xml" value="0.1875" />
       </map>
     </option>

@@ -1,10 +1,12 @@
 package com.example.bhoomicam.view.dashboard
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.bhoomicam.R
@@ -41,6 +43,9 @@ class DroneServiesPage : Fragment() {
                 val dialogView =
                     LayoutInflater.from(requireContext())
                         .inflate(R.layout.drone_data, null)
+                dialogView.findViewById<Button>(R.id.button10).setOnClickListener {
+                    startActivity(Intent(requireContext(),PaymentActivity::class.java))
+                }
                 bottomSheet.setContentView(dialogView)
                 bottomSheet.show()
             }

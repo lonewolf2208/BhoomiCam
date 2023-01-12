@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="280dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/white_dialog_background"
+    >
+
+
+       <androidx.appcompat.widget.Toolbar
+           android:id="@+id/toolbar_"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:background="@drawable/toolbar_drawable">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Data Uploaded Successfully"
+                    android:textColor="@color/white"
+                    android:textSize="16dp"
+                />
+
+       </androidx.appcompat.widget.Toolbar>
+
+       <ImageView
+           android:id="@+id/tick"
+          android:layout_width="50dp"
+          android:layout_height="50dp"
+          android:src="@drawable/tick_"
+          android:background="@drawable/tick_background"
+          android:layout_centerHorizontal="true"
+          android:layout_marginTop="18dp"
+           android:layout_below="@id/toolbar_"
+       />
+
+         <TextView
+             android:id="@+id/thank_you"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+                android:text="Thank You"
+                android:textSize="18dp"
+                android:textColor="@color/black"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/tick"
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="20dp"
+                />
+
+       <ImageView
+           android:id="@+id/boarder"
+           android:layout_width="match_parent"
+           android:layout_height="1.5dp"
+              android:layout_marginLeft="10dp"
+              android:layout_marginRight="10dp"
+              android:background="@drawable/tick_background"
+              android:layout_below="@id/thank_you"
+              />
+
+
+       <RelativeLayout
+           android:id="@+id/ok_layout"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_below="@id/boarder"
+           android:layout_marginBottom="8dp"
+           android:layout_marginTop="6dp">
+
+           <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+              android:text="OK"
+              android:textSize="19dp"
+              android:textColor="@color/dark_green"
+              android:layout_centerHorizontal="true"
+              />
+
+       </RelativeLayout>
+
+</RelativeLayout>

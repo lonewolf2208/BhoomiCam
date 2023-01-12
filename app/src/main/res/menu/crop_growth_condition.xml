@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/transplanting_"
+        android:title="Transplanting"/>
+
+    <item
+        android:title="Sowing"
+        android:id="@+id/sowing_id"/>
+
+    <item
+        android:id="@+id/tillering"
+        android:title="Tillering"/>
+
+    <item
+        android:id="@+id/vegetative"
+        android:title="Vagetative"/>
+
+    <item
+        android:id="@+id/flowering_"
+        android:title="Flowering"/>
+
+    <item
+        android:id="@+id/maturity_id"
+        android:title="Maturity"/>
+
+
+</menu>

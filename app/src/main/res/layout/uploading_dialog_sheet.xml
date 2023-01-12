@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="@drawable/white_background"
+          android:padding="18dp">
+
+      <androidx.cardview.widget.CardView
+          android:id="@+id/first_card_view"
+          android:layout_width="110dp"
+          android:layout_height="110dp"
+          app:cardCornerRadius="15dp"
+          android:layout_marginTop="2dp"
+          android:layout_marginBottom="2dp"
+          android:layout_marginLeft="4dp"
+          android:layout_centerHorizontal="true"
+          android:elevation="3dp">
+
+
+            <ImageView
+                android:id="@+id/first_photo_show"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+            />
+
+      </androidx.cardview.widget.CardView>
+
+              <RelativeLayout
+                android:id="@+id/pp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/first_card_view"
+                android:padding="7dp">
+
+
+              <ProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="118dp"
+                android:layout_height="118dp"
+                android:indeterminateOnly="false"
+                android:progressDrawable="@drawable/progress_bar_drawable"
+                android:layout_centerHorizontal="true"
+                android:progress="0"
+                android:rotation="270"
+              />
+
+                  <TextView
+                      android:id="@+id/text_show_upload"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="15%"
+                      android:layout_centerHorizontal="true"
+                      android:layout_centerVertical="true"
+                      android:textStyle="bold"
+                      android:textColor="@color/black"
+                  />
+         </RelativeLayout>
+
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Uploading your picture to server Please do not close application"
+              android:textColor="@color/dark_green"
+              android:layout_below="@id/pp"
+              android:layout_marginTop="10dp"
+              android:textSize="14dp"
+          />
+
+      </RelativeLayout>
+
+</RelativeLayout>

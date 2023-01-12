@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/kharif"
+        android:title="Kharif"
+    />
+
+    <item
+        android:id="@+id/Rabi"
+        android:title="Rabi"
+    />
+
+    <item
+        android:id="@+id/Zaid"
+        android:title="Zaid"
+    />
+
+</menu>

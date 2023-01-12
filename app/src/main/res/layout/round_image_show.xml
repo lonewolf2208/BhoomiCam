@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/whole_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="120dp"
+    android:layout_height="120dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/first_card_view"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:cardCornerRadius="50dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/image_show_background"
+        android:elevation="3dp">
+
+        <ImageView
+            android:id="@+id/first_photo_show"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ground_nuts"
+        />
+
+        <ImageView
+            android:id="@+id/selected_image_blur"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/gray_transparent"
+            android:visibility="gone"
+        />
+
+
+    </androidx.cardview.widget.CardView>
+
+<!--    // crop name -->
+      <TextView
+          android:id="@+id/crop_name_"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="crop name"
+          android:textColor="@color/black"
+          android:textSize="16dp"
+          android:layout_below="@id/first_card_view"
+          android:layout_centerHorizontal="true"
+      />
+
+      <RelativeLayout
+          android:id="@+id/selected_layout"
+          android:layout_width="32dp"
+          android:layout_height="32dp"
+          android:background="@drawable/round_background"
+          android:elevation="2dp"
+          android:layout_alignParentRight="true"
+          android:layout_marginRight="10dp"
+          android:layout_alignParentBottom="true"
+          android:padding="3dp"
+          android:layout_marginBottom="22dp"
+          android:visibility="gone"
+          >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/tick_blue"
+            />
+
+      </RelativeLayout>
+
+</RelativeLayout>
