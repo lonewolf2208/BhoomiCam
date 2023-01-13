@@ -27,7 +27,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/LoginPasswordContainer"
+        android:id="@+id/SignUpNameContainer"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -35,6 +35,7 @@
         android:layout_marginTop="24dp"
         android:layout_marginEnd="24dp"
         app:boxCornerRadiusBottomEnd="8dp"
+        app:helperTextTextColor="#FF0000"
         app:boxCornerRadiusBottomStart="8dp"
         app:boxCornerRadiusTopEnd="8dp"
         app:boxCornerRadiusTopStart="8dp"
@@ -43,7 +44,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView3">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/LoginPassword"
+            android:id="@+id/SignUpName"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:clickable="true"
@@ -71,7 +72,7 @@
         app:boxCornerRadiusTopStart="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LoginPasswordContainer">
+        app:layout_constraintTop_toBottomOf="@+id/SignUpNameContainer">
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/PhoneNumber"
@@ -254,7 +255,7 @@
         android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="@+id/PhoneNumberContainer"
         app:layout_constraintEnd_toEndOf="@+id/PhoneNumberContainer"
-        app:layout_constraintTop_toBottomOf="@+id/LoginPasswordContainer"
+        app:layout_constraintTop_toBottomOf="@+id/SignUpNameContainer"
         app:strokeColor="#8E8E8E"
         app:strokeWidth="1dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

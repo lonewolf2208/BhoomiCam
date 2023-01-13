@@ -77,7 +77,7 @@
                 android:layout_height="match_parent"
                 android:clickable="true"
                 android:ems="10"
-                android:hint="Full Name/Phone Number"
+                android:hint="Enter Your Phone Number"
                 android:letterSpacing="0.04"
                 android:linksClickable="true"
                 android:paddingLeft="32dp"
@@ -110,7 +110,7 @@
                 android:layout_height="match_parent"
                 android:clickable="true"
                 android:ems="10"
-                android:hint="Password"
+                android:hint="Enter Your OTP"
                 android:inputType="textPassword"
                 android:letterSpacing="0.04"
                 android:linksClickable="true"
@@ -147,6 +147,7 @@
             android:fontFamily="@font/satoshi_variable"
             android:text="Forgot Password?"
             android:textColor="#8BC53F"
+            android:visibility="gone"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/LoginPasswordContainer" />
 
@@ -207,6 +208,19 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/SendOTpLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginBottom="-5dp"
+            android:text="Send OTP"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="@+id/LoginNameContainer"
+            app:layout_constraintEnd_toEndOf="@+id/LoginNameContainer"
+            app:layout_constraintTop_toTopOf="@+id/LoginNameContainer"
+            app:strokeColor="#8E8E8E"
+            app:strokeWidth="1dp" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>
