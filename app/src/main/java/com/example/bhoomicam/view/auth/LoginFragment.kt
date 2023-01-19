@@ -10,15 +10,19 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.example.bhoomicam.R
 import com.example.bhoomicam.databinding.FragmentLoginBinding
 import com.example.bhoomicam.view.dashboard.DashboardActivity
+import com.example.bhoomicam.view.dashboard.MapActivity
+import com.example.bhoomicam.view.utils.Datastore
 import com.google.firebase.FirebaseException
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.PhoneAuthCredential
 import com.google.firebase.auth.PhoneAuthOptions
 import com.google.firebase.auth.PhoneAuthProvider
+import kotlinx.coroutines.launch
 import java.util.concurrent.TimeUnit
 
 
@@ -52,9 +56,6 @@ class LoginFragment : Fragment() {
         var binding = FragmentLoginBinding.inflate(inflater, container, false)
         binding.SignUpPage.setOnClickListener {
             findNavController().navigate(R.id.action_loginFragment_to_signUp)
-        }
-        binding.ForgotPasswordPage.setOnClickListener {
-            findNavController().navigate(R.id.action_loginFragment_to_forgotPassword)
         }
         binding.LoginButton.setOnClickListener {
             startActivity(Intent(requireContext(),DashboardActivity::class.java))
@@ -124,7 +125,12 @@ class LoginFragment : Fragment() {
         mAuth!!.signInWithCredential(credential)
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
-                    startActivity(Intent(requireContext(),DashboardActivity::class.java))
+                    lifecycleScope.launch {
+                        var datastore= Datastore(requireContext())
+                        datastore.changeLoginState(true)
+                    }
+                    activity?.finish()
+                    startActivity(Intent(requireContext(),MapActivity::class.java))
                 } else {
                     Toast.makeText(
                         requireContext(),

@@ -14,7 +14,11 @@
         android:id="@+id/homePage"
         android:name="com.example.bhoomicam.view.dashboard.HomePage"
         android:label="fragment_home_page"
-        tools:layout="@layout/fragment_home_page" />
+        tools:layout="@layout/fragment_home_page" >
+        <action
+            android:id="@+id/action_homePage_to_cropAnalysis"
+            app:destination="@id/cropAnalysis" />
+    </fragment>
     <fragment
         android:id="@+id/ordersPage"
         android:name="com.example.bhoomicam.view.dashboard.OrdersPage"
@@ -36,7 +40,17 @@
         android:label="fragment_order_booking_page"
         tools:layout="@layout/fragment_order_booking_page" >
         <action
-            android:id="@+id/action_orderBookingPage_to_orderDetailsPage"
-            app:destination="@id/orderDetailsPage" />
+            android:id="@+id/action_orderBookingPage_to_choosePayment"
+            app:destination="@id/choosePayment" />
     </fragment>
+    <fragment
+        android:id="@+id/choosePayment"
+        android:name="com.example.bhoomicam.view.dashboard.ChoosePayment"
+        android:label="fragment_choose_payment"
+        tools:layout="@layout/fragment_choose_payment" />
+    <fragment
+        android:id="@+id/cropAnalysis"
+        android:name="com.example.bhoomicam.view.dashboard.CropAnalysis"
+        android:label="fragment_crop_analysis"
+        tools:layout="@layout/fragment_crop_analysis" />
 </navigation>

@@ -10,9 +10,12 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.example.bhoomicam.databinding.FragmentSignUpBinding
 import com.example.bhoomicam.view.dashboard.DashboardActivity
+import com.example.bhoomicam.view.dashboard.MapActivity
+import com.example.bhoomicam.view.utils.Datastore
 import com.google.firebase.FirebaseException
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.PhoneAuthCredential
@@ -20,6 +23,7 @@ import com.google.firebase.auth.PhoneAuthOptions
 import com.google.firebase.auth.PhoneAuthProvider
 import com.google.firebase.auth.PhoneAuthProvider.ForceResendingToken
 import com.google.firebase.auth.PhoneAuthProvider.OnVerificationStateChangedCallbacks
+import kotlinx.coroutines.launch
 import java.util.concurrent.TimeUnit
 
 
@@ -51,9 +55,6 @@ class SignUp : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         var binding = FragmentSignUpBinding.inflate(inflater, container, false)
-        binding.SingnUpButton.setOnClickListener {
-
-        }
         binding.LogInPage.setOnClickListener {
             findNavController().navigate(com.example.bhoomicam.R.id.action_signUp_to_loginFragment)
         }
@@ -124,7 +125,13 @@ class SignUp : Fragment() {
         mAuth!!.signInWithCredential(credential)
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
-                   startActivity(Intent(requireContext(),DashboardActivity::class.java))
+                    lifecycleScope.launch {
+                            var datastore=Datastore(requireContext())
+                            datastore.changeLoginState(true)
+
+                    }
+                    activity?.finish()
+                    startActivity(Intent(requireContext(), MapActivity::class.java))
                 } else {
                     Toast.makeText(
                         requireContext(),

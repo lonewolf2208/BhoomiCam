@@ -17,7 +17,7 @@
            android:layout_marginStart="24dp"
            android:layout_marginTop="12dp"
            android:fontFamily="@font/satoshi_variable"
-           android:text="Drone Services"
+           android:text="@string/drone_services"
            android:textColor="#41543B"
            android:textSize="18sp"
            app:layout_constraintStart_toStartOf="parent"

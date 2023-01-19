@@ -11,9 +11,6 @@
         android:label="fragment_sign_up"
         tools:layout="@layout/fragment_sign_up" >
         <action
-            android:id="@+id/action_signUp_to_createPassword"
-            app:destination="@id/createPassword" />
-        <action
             android:id="@+id/action_signUp_to_loginFragment"
             app:destination="@id/loginFragment" />
     </fragment>
@@ -30,9 +27,6 @@
         <action
             android:id="@+id/action_loginFragment_to_signUp"
             app:destination="@id/signUp" />
-        <action
-            android:id="@+id/action_loginFragment_to_forgotPassword"
-            app:destination="@id/forgotPassword" />
     </fragment>
     <fragment
         android:id="@+id/splashScreen"
@@ -41,25 +35,23 @@
         tools:layout="@layout/fragment_splash_screen" >
         <action
             android:id="@+id/action_splashScreen_to_chooseLang"
-            app:destination="@id/chooseLang" />
+            app:destination="@id/chooseLang"
+            app:popUpTo="@id/splashScreen"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/welcomePage"
         android:name="com.example.bhoomicam.view.auth.WelcomePage"
         android:label="fragment_welcome_page"
-        tools:layout="@layout/fragment_welcome_page" >
-        <action
-            android:id="@+id/action_welcomePage_to_loginFragment"
-            app:destination="@id/loginFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_welcome_page" />
     <fragment
         android:id="@+id/chooseLang"
         android:name="com.example.bhoomicam.view.auth.ChooseLang"
         android:label="fragment_choose_lang"
         tools:layout="@layout/fragment_choose_lang" >
         <action
-            android:id="@+id/action_chooseLang_to_welcomePage"
-            app:destination="@id/welcomePage" />
+            android:id="@+id/action_chooseLang_to_loginFragment"
+            app:destination="@id/loginFragment" />
     </fragment>
     <fragment
         android:id="@+id/forgotPassword"

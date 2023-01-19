@@ -18,7 +18,7 @@
         android:layout_marginTop="64dp"
         android:layout_marginEnd="24dp"
         android:fontFamily="@font/satoshi_variable"
-        android:text="Sign-Up"
+        android:text="@string/sign_up"
         android:textAlignment="center"
         android:textColor="#8BC53F"
         android:textSize="24sp"
@@ -49,7 +49,7 @@
             android:layout_height="match_parent"
             android:clickable="true"
             android:ems="10"
-            android:hint="Full Name"
+            android:hint="@string/full_name"
             android:letterSpacing="0.04"
             android:linksClickable="true"
             android:paddingLeft="32dp"
@@ -81,74 +81,13 @@
         android:clickable="true"
         android:paddingTop="12dp"
         android:ems="10"
-        android:hint="Phone Number"
+        android:hint="@string/phone_number"
         android:letterSpacing="0.04"
         android:linksClickable="true"
         android:paddingLeft="32dp"
         android:paddingBottom="12dp" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/PasswordContainer"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="24dp"
-        app:boxCornerRadiusBottomEnd="8dp"
-        app:boxCornerRadiusBottomStart="8dp"
-        app:boxCornerRadiusTopEnd="8dp"
-        app:boxCornerRadiusTopStart="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:passwordToggleEnabled="true"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/PhoneNumberContainer">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/Password"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:clickable="true"
-            android:ems="10"
-            android:hint="Password"
-            android:letterSpacing="0.04"
-            android:linksClickable="true"
-            android:paddingLeft="32dp"
-            android:paddingTop="12dp"
-            android:paddingBottom="12dp" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/ConfirmPasswordContainer"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="24dp"
-        app:boxCornerRadiusBottomEnd="8dp"
-        app:boxCornerRadiusBottomStart="8dp"
-        app:boxCornerRadiusTopEnd="8dp"
-        app:boxCornerRadiusTopStart="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/PasswordContainer"
-        app:passwordToggleEnabled="true">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/ConfirmPassword"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:clickable="true"
-            android:ems="10"
-            android:hint="Confirm Password"
-            android:letterSpacing="0.04"
-            android:linksClickable="true"
-            android:paddingLeft="32dp"
-            android:paddingTop="12dp"
-            android:paddingBottom="12dp" />
-    </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/OtpContainer"
@@ -164,8 +103,7 @@
         app:boxCornerRadiusTopStart="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ConfirmPasswordContainer"
-        >
+        app:layout_constraintTop_toBottomOf="@+id/PhoneNumberContainer">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/Otp"
@@ -173,7 +111,7 @@
             android:layout_height="match_parent"
             android:clickable="true"
             android:ems="10"
-            android:hint="Enter OTP"
+            android:hint="@string/enter_otp"
             android:letterSpacing="0.04"
             android:linksClickable="true"
             android:paddingLeft="32dp"
@@ -188,7 +126,7 @@
         android:layout_marginTop="6dp"
         android:layout_marginEnd="24dp"
         android:fontFamily="@font/satoshi_variable"
-        android:text="Resend OTP"
+        android:text="@string/resend_otp"
         android:textColor="#8BC53F"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/OtpContainer" />
@@ -214,7 +152,7 @@
         android:fontFamily="@font/satoshi_variable"
         android:paddingTop="12dp"
         android:paddingBottom="12dp"
-        android:text="Sign Up"
+        android:text="@string/sign_up"
         app:cornerRadius="8dp"
         android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="parent"
@@ -228,7 +166,7 @@
         android:layout_marginStart="76dp"
         android:layout_marginTop="4dp"
         android:fontFamily="@font/satoshi_variable"
-        android:text="Already have an account ?"
+        android:text="@string/already_have_an_account"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/SingnUpButton" />
 
@@ -239,7 +177,7 @@
         android:layout_marginStart="2dp"
         android:layout_marginTop="4dp"
         android:fontFamily="@font/satoshi_variable"
-        android:text="Login "
+        android:text="@string/login"
         android:textColor="#8BC53F"
         app:layout_constraintStart_toEndOf="@+id/textView7"
         app:layout_constraintTop_toBottomOf="@+id/SingnUpButton" />
@@ -251,7 +189,7 @@
         android:layout_marginTop="12dp"
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="-5dp"
-        android:text="Send OTP"
+        android:text="@string/send_otp"
         android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="@+id/PhoneNumberContainer"
         app:layout_constraintEnd_toEndOf="@+id/PhoneNumberContainer"

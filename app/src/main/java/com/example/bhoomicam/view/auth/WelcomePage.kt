@@ -23,12 +23,12 @@ class WelcomePage : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         var binding=FragmentWelcomePageBinding.inflate(inflater, container, false)
-        binding.button2.setOnClickListener {
-            findNavController().navigate(R.id.action_welcomePage_to_loginFragment)
-        }
-        binding.button5.setOnClickListener {
-            findNavController().navigate(R.id.action_welcomePage_to_loginFragment)
-        }
+//        binding.button2.setOnClickListener {
+//            findNavController().navigate(R.id.action_welcomePage_to_loginFragment)
+//        }
+//        binding.button5.setOnClickListener {
+//            findNavController().navigate(R.id.action_welcomePage_to_loginFragment)
+//        }
         return binding.root
     }
 
