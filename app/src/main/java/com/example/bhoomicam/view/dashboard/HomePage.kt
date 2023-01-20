@@ -32,6 +32,7 @@ import java.util.*
 class HomePage : Fragment() {
     private val WEATHER_API_KEY = "3b0667770f1f4a13a86ca58625cead27"
     var WEATHER_DETAILS = ""
+    var dataloaded = false
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -62,40 +63,49 @@ class HomePage : Fragment() {
 //        Log.d("asda",req)
         binding.dateHome.text=req
         lifecycleScope.launch {
-            var datastore=Datastore(requireContext())
-            var lat=datastore.getUserDetails("latitude") ?: "29.854263"
-            var long = datastore.getUserDetails("longitude") ?:"77.888000"
+            var datastore = Datastore(requireContext())
+            var lat = datastore.getUserDetails("latitude") ?: "29.854263"
+            var long = datastore.getUserDetails("longitude") ?: "77.888000"
 
             val weather_url =
                 "https://api.weatherbit.io/v2.0/current?lat=${lat}&lon=${long}&key=$WEATHER_API_KEY"
             val make_request_ = Volley.newRequestQueue(requireContext())
 
             // this will request the weather report from the API
-            val string_req = StringRequest(
-                Request.Method.GET , weather_url ,
-                { response_ ->
+            if (binding.tempHome.text.isNullOrEmpty()) {
+                val string_req = StringRequest(
+                    Request.Method.GET, weather_url,
+                    { response_ ->
 //                    Toast.makeText(requireContext(),"Data downloaded successfully",Toast.LENGTH_SHORT).show()
 
-                    // converting string response to json
-                    val object_ = JSONObject(response_)
-                    val arr_ = object_.getJSONArray("data")
+                        // converting string response to json
+                        val object_ = JSONObject(response_)
+                        val arr_ = object_.getJSONArray("data")
 
-                    val object_2 = arr_.getJSONObject(0)
+                        val object_2 = arr_.getJSONObject(0)
 
-                    // making String to display
+                        // making String to display
 
-                    binding.tempHome.text=object_2.getString("temp")
-                    binding.cityName.text=object_2.getString("city_name")
-                    WEATHER_DETAILS = object_2.getString("temp") + "deg Celsius , of the city :" + object_2.getString("city_name")
+                        binding.tempHome.text = object_2.getString("temp") + "°C"
+                        binding.cityName.text = object_2.getString("city_name")
+                        WEATHER_DETAILS =
+                            object_2.getString("temp") + "deg Celsius , of the city :" + object_2.getString(
+                                "city_name"
+                            )
 //                load_fragment(Home_page(context_,WEATHER_DETAILS))
 //                    Toast.makeText(requireContext(), WEATHER_DETAILS, Toast.LENGTH_SHORT).show()
-                },
-                {
-                    Toast.makeText(requireContext(), "Temperature didn't get", Toast.LENGTH_SHORT).show()
-                })
+                    },
+                    {
+                        Toast.makeText(
+                            requireContext(),
+                            "Temperature didn't get",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    })
 
 
-            make_request_.add(string_req)
+                make_request_.add(string_req)
+            }
         }
         binding.recyclerViewHome.layoutManager=layoutManager
         var adapter= HomeAdapter(data)
@@ -115,6 +125,8 @@ class HomePage : Fragment() {
         return binding.root
     }
 
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
 
-
+    }
 }

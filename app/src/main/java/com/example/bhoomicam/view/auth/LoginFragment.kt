@@ -23,6 +23,7 @@ import com.google.firebase.auth.PhoneAuthCredential
 import com.google.firebase.auth.PhoneAuthOptions
 import com.google.firebase.auth.PhoneAuthProvider
 import kotlinx.coroutines.launch
+import java.lang.Exception
 import java.util.concurrent.TimeUnit
 
 
@@ -42,7 +43,7 @@ class LoginFragment : Fragment() {
     private var generateOTPBtn: Button? = null
 
     // string for storing our verification ID
-    private var verificationId: String? = null
+    private var verificationId: String = ""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -205,10 +206,17 @@ class LoginFragment : Fragment() {
     private fun verifyCode(code: String) {
         // below line is used for getting
         // credentials from our verification id and code.
-        val credential = PhoneAuthProvider.getCredential(verificationId!!, code)
+        try {
+            val credential = PhoneAuthProvider.getCredential(verificationId, code)
+            // after getting credential we are
+            // calling sign in method.
+            signInWithCredential(credential)
+        }
+       catch (e:Exception)
+       {
+           Toast.makeText(requireContext(), "Invalid Credential", Toast.LENGTH_SHORT).show()
+       }
 
-        // after getting credential we are
-        // calling sign in method.
-        signInWithCredential(credential)
+
     }
 }

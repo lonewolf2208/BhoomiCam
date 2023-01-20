@@ -44,6 +44,16 @@ class ChooseLang : Fragment() {
             findNavController().navigate(R.id.action_chooseLang_to_loginFragment)
         }
         binding.button.setOnClickListener {
+            var locale = Locale("en")
+            Locale.setDefault(locale)
+            var configuration=context?.resources?.configuration
+            configuration?.locale=locale
+            context?.resources?.updateConfiguration(configuration,context?.resources?.displayMetrics)
+//            activity?.recreate()
+            var editor= Datastore(requireContext())
+            lifecycleScope.launch {
+                editor.saveUserDetails("lang", "en")
+            }
             findNavController().navigate(R.id.action_chooseLang_to_loginFragment)
         }
         return binding.root

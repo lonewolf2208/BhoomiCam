@@ -50,13 +50,13 @@ class MapActivity : AppCompatActivity(),OnMapReadyCallback {
 
         supportMapFragment =
             supportFragmentManager.findFragmentById(R.id.google_map) as SupportMapFragment
-        mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
+        mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
         // Async map
         findViewById<Button>(R.id.button14).setOnClickListener {
             startActivity(Intent(this,DashboardActivity::class.java))
             finish()
         }
-        getLastLocation();
+        getLastLocation()
     }
 
     @SuppressLint("MissingPermission")
@@ -73,7 +73,7 @@ class MapActivity : AppCompatActivity(),OnMapReadyCallback {
                 // object
 
                 mFusedLocationClient!!.lastLocation.addOnCompleteListener { task ->
-                    val location: Location = task.getResult()!!
+                    val location: Location = task.result
                     lifecycleScope.launch {
                         var datastore=Datastore(this@MapActivity)
                         datastore.saveUserDetails("latitude",location.latitude.toString())
@@ -81,9 +81,9 @@ class MapActivity : AppCompatActivity(),OnMapReadyCallback {
 
                     }
 
-                    latitudeTextView = location.getLatitude().toString() + ""
-                    longitTextView = location.getLongitude().toString() + ""
-                    supportMapFragment?.getMapAsync(this@MapActivity)
+                    latitudeTextView = location.latitude.toString() + ""
+                    longitTextView = location.longitude.toString() + ""
+                    supportMapFragment.getMapAsync(this@MapActivity)
                 }
             } else {
                 Toast.makeText(this, "Please turn on" + " your location...", Toast.LENGTH_LONG)
@@ -103,10 +103,10 @@ class MapActivity : AppCompatActivity(),OnMapReadyCallback {
         // Initializing LocationRequest
         // object with appropriate methods
         val mLocationRequest = LocationRequest()
-        mLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY)
-        mLocationRequest.setInterval(5)
-        mLocationRequest.setFastestInterval(0)
-        mLocationRequest.setNumUpdates(1)
+        mLocationRequest.priority = LocationRequest.PRIORITY_HIGH_ACCURACY
+        mLocationRequest.interval = 5
+        mLocationRequest.fastestInterval = 0
+        mLocationRequest.numUpdates = 1
 
         // setting LocationRequest
         // on FusedLocationClient
@@ -122,8 +122,8 @@ class MapActivity : AppCompatActivity(),OnMapReadyCallback {
         override fun onLocationResult(locationResult: LocationResult) {
             val mLastLocation: Location? = locationResult.lastLocation
 //            Toast.makeText(this@MapActivity, mLastLocation?.latitude.toString(), Toast.LENGTH_SHORT).show()
-            latitudeTextView=  mLastLocation?.getLatitude().toString() + ""
-            longitTextView= mLastLocation?.getLongitude().toString() + ""
+            latitudeTextView=  mLastLocation?.latitude.toString() + ""
+            longitTextView= mLastLocation?.longitude.toString() + ""
 
         }
     }
@@ -188,17 +188,17 @@ class MapActivity : AppCompatActivity(),OnMapReadyCallback {
     override fun onMapReady(mMap: GoogleMap) {
 
 //        mFusedLocationClient?.locationAvailability?.addOnSuccessListener {
-                    mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
-        mMap.getUiSettings().setZoomControlsEnabled(true);
-        mMap.getUiSettings().setZoomGesturesEnabled(true);
-        mMap.getUiSettings().setCompassEnabled(true);
+        mMap.mapType = GoogleMap.MAP_TYPE_NORMAL
+        mMap.uiSettings.isZoomControlsEnabled = true
+        mMap.uiSettings.isZoomGesturesEnabled = true
+        mMap.uiSettings.isCompassEnabled = true
         //Initialize Google Play Services
         if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             if (ContextCompat.checkSelfPermission(this,
                     Manifest.permission.ACCESS_FINE_LOCATION)
                 == PackageManager.PERMISSION_GRANTED) {
 
-                mMap.setMyLocationEnabled(true);
+                mMap.isMyLocationEnabled = true
                 val location = LatLng(latitudeTextView.toDouble(), longitTextView.toDouble())
                 mMap.addMarker(
                     MarkerOptions().position(location)
