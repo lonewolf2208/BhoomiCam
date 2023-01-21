@@ -228,7 +228,7 @@
                         android:layout_height="85dp"
                         android:layout_marginStart="24dp"
                         android:layout_marginTop="8dp"
-                        android:background="@drawable/drone_home"
+                        android:background="@drawable/home_card_gradient"
                         android:padding="4dp"
                         android:scaleType="centerCrop"
                         app:layout_constraintStart_toStartOf="parent"

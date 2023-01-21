@@ -42,15 +42,13 @@
             android:id="@+id/view6"
             android:layout_width="0dp"
             android:layout_height="3dp"
-            android:layout_marginTop="32dp"
             android:layout_marginBottom="10dp"
             android:background="#41543B"
             android:backgroundTint="#41543B"
             app:layout_constraintBottom_toTopOf="@+id/textView21"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView29" />
+            app:layout_constraintStart_toStartOf="parent" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/NameBookingContainer"
@@ -224,9 +222,11 @@
             android:layout_marginStart="24dp"
             android:layout_marginTop="24dp"
             android:layout_marginEnd="24dp"
+            android:layout_marginBottom="32dp"
             android:fontFamily="@font/satoshi_regular"
             android:text="@string/_8226_payment_for_the_respective_service_will_be_done_after_the_completion_of_the_booked_task_n_8226_you_can_choose_upi_cash_on_delivery_cod_net_banking_for_the_payment"
             android:textColor="#000000"
+            app:layout_constraintBottom_toTopOf="@+id/view6"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/AreaBookingContainer" />
