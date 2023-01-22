@@ -23,7 +23,7 @@ class ChoosePayment : Fragment() {
         // Inflate the layout for this fragment
         var binding= FragmentChoosePaymentBinding.inflate(inflater, container, false)
         binding.ViaUpi.setOnClickListener {
-            startActivity(Intent(requireContext(), PaymentActivity::class.java))
+            startActivity(Intent(requireContext(),PaymentActivity::class.java))
         }
         return binding.root
     }

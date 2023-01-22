@@ -48,10 +48,11 @@ class HomePage : Fragment() {
         var binding= FragmentHomePageBinding.inflate(inflater, container, false)
         var layoutManager= StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL)
         var data = listOf<drone_services_data>(
-            drone_services_data(R.drawable.drone_home,"Try Our Drone Services"),
-            drone_services_data(R.drawable.home2,"See all your Orders"),
-            drone_services_data(R.drawable.ic_drone_soil_analysis,"Crop Ananlysis"),
-            drone_services_data(R.drawable.home2,"Login Page")
+            drone_services_data(R.drawable.drone_home,getString(R.string.drone),getString(R.string.check_you)),
+            drone_services_data(R.drawable.home2,getString(R.string.see_all_your_orders),getString(R.string.see_all)),
+            drone_services_data(R.drawable.ic_drone_soil_analysis,getString(R.string.crop_analysi),getString(
+                            R.string.check_your)),
+            drone_services_data(R.drawable.home2,getString(R.string.register),getString(R.string.re))
         )
         var sdf = SimpleDateFormat("EEEE")
         val d = Date()
@@ -112,14 +113,14 @@ class HomePage : Fragment() {
         binding.recyclerViewHome.adapter=adapter
         adapter.onClickListener(object : HomeAdapter.ClickListener {
             override fun OnClick(position: Int) {
-                if(position==3)
+                when(position)
                 {
-                    startActivity(Intent( requireContext(),login_page::class.java))
+                    0->findNavController().navigate(R.id.action_homePage_to_droneServiesPage)
+                    1-> findNavController().navigate(R.id.action_homePage_to_ordersPage)
+                    2-> findNavController().navigate(R.id.action_homePage_to_cropAnalysis)
+                    3->   startActivity(Intent( requireContext(),login_page::class.java))
                 }
-                if(position==2)
-                {
-                    findNavController().navigate(R.id.action_homePage_to_cropAnalysis)
-                }
+
             }
         })
         return binding.root

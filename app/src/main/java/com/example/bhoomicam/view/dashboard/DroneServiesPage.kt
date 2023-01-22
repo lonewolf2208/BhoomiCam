@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.TextView
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
@@ -29,10 +30,10 @@ class DroneServiesPage : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         var binding=FragmentDroneServiesPageBinding.inflate(inflater, container, false)
-        var data = listOf<drone_services_data>(drone_services_data(R.drawable.ic_drone_spray,"Drone based Fertilizer, Pesticides, weedicides spray services"),
-            drone_services_data(R.drawable.ic_drone_group_48064,"Drone based Evidence for Insurance Companies"),
-            drone_services_data(R.drawable.ic_drone_soil_analysis,"Drone based soil and field analysis"),
-            drone_services_data(R.drawable.drone_health_monitoring,"Drone based yield estimation, geo-fencing, crop growth, health analysis")
+        var data = listOf<drone_services_data>(drone_services_data(R.drawable.ic_drone_spray,"Drone based Fertilizer, Pesticides, weedicides spray services","Drone based Fertilizer, Pesticides, weedicides spray services"),
+            drone_services_data(R.drawable.ic_drone_group_48064,"Drone based Evidence for Insurance Companies","Drone based Evidence for Insurance Companies"),
+            drone_services_data(R.drawable.ic_drone_soil_analysis,"Drone based soil and field analysis","Drone based soil and field analysis"),
+            drone_services_data(R.drawable.drone_health_monitoring,"Drone based yield estimation, geo-fencing, crop growth, health analysis","Drone based yield estimation, geo-fencing, crop growth, health analysis")
         )
         var layoutManager= StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL)
         binding.RecylerViewDroneServices.layoutManager=layoutManager
@@ -44,6 +45,8 @@ class DroneServiesPage : Fragment() {
                 val dialogView =
                     LayoutInflater.from(requireContext())
                         .inflate(R.layout.drone_data, null)
+                dialogView.findViewById<TextView>(R.id.data_head).text=data[position].text.toString()
+                dialogView.findViewById<TextView>(R.id.data_content).text=data[position].Content.toString()
                 dialogView.findViewById<Button>(R.id.button10).setOnClickListener {
                    findNavController().navigate(R.id.orderBookingPage)
                     bottomSheet.cancel()

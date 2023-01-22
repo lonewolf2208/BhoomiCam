@@ -1,7 +1,6 @@
 package com.example.bhoomicam.view.dashboard
 
 import android.app.DatePickerDialog
-import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -30,7 +29,12 @@ class OrderBookingPage : Fragment(),DatePickerDialog.OnDateSetListener  {
         // Inflate the layout for this fragment
         binding = FragmentOrderBookingPageBinding.inflate(inflater, container, false)
         binding.BookDroneServices.setOnClickListener {
-         findNavController().navigate(R.id.action_orderBookingPage_to_choosePayment)
+            if(binding.AreaBooking.text.isNullOrEmpty()){
+                Toast.makeText(requireContext(), "Enter area of land", Toast.LENGTH_SHORT).show()
+            }
+            else {
+                findNavController().navigate(R.id.action_orderBookingPage_to_choosePayment)
+            }
         }
         binding.DateBooking.setOnClickListener {
             var calendar = Calendar.getInstance()
@@ -50,7 +54,7 @@ class OrderBookingPage : Fragment(),DatePickerDialog.OnDateSetListener  {
             Selectedmonth = "0" + (month + 1).toString()
         }
         if (dayOfMonth / 10 == 0) {
-            Toast.makeText(context, "dsadasdadsad", Toast.LENGTH_LONG).show()
+//            Toast.makeText(context, "dsadasdadsad", Toast.LENGTH_LONG).show()
             SelectedDate = "0" + (dayOfMonth).toString()
         }
         var date =

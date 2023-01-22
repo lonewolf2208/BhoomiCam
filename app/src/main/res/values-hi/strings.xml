@@ -82,4 +82,12 @@
     <string name="welcome_back">वापसी पर स्वागत है</string>
     <string name="didn_t_have_account">खाता नहीं था?</string>
     <string name="already_have_an_account">पहले से ही एक खाता है ?</string>
+    <string name="drone">हमारी ड्रोन सेवाओं को आज़माएं</string>
+    <string name="see_all_your_orders">अपने सभी आदेश देखें</string>
+    <string name="crop_analysi">फसल विश्लेषण</string>
+    <string name="register">खुद को रजिस्टर करें</string>
+    <string name="check_you">हमारी ड्रोन सेवाओं को देखें</string>
+    <string name="see_all">अपने सभी आदेश देखें</string>
+    <string name="check_your">अपनी फसल की वृद्धि की जाँच करें</string>
+    <string name="re">अपडेट के लिए खुद को रजिस्टर करें</string>
 </resources>

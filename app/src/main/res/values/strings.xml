@@ -86,4 +86,12 @@
     <string name="welcome_back">Welcome Back</string>
     <string name="didn_t_have_account">Didn\'t have account?</string>
     <string name="already_have_an_account">Already have an account ?</string>
+    <string name="drone">Try Our Drone Services</string>
+    <string name="see_all_your_orders">See all your Orders</string>
+    <string name="crop_analysi">Crop Analysis</string>
+    <string name="register">Register Yourself</string>
+    <string name="check_you">Check out our drone services</string>
+    <string name="see_all">See all your orders</string>
+    <string name="check_your">Check on your crop growth</string>
+    <string name="re">Register yourself for updates</string>
 </resources>

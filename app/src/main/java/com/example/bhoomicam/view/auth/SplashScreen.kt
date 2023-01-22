@@ -42,6 +42,7 @@ class SplashScreen : Fragment() {
                     }
                     if (datastore.isLogin()) {
                         startActivity(Intent(requireContext(),DashboardActivity::class.java))
+                        activity?.finish()
                     } else {
                         findNavController().navigate(R.id.action_splashScreen_to_chooseLang)
                     }

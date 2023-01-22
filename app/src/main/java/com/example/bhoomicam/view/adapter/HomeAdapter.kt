@@ -43,7 +43,7 @@ class HomeAdapter(var data:List<drone_services_data>?):RecyclerView.Adapter<Home
         position: Int
     ) {
         holder.binding.captionservices.text= data!![holder.adapterPosition].text.toString()
-//        holder.binding.datahome.text= data!![holder.adapterPosition].Content.toString()
+        holder.binding.datahome.text= data!![holder.adapterPosition].Content.toString()
         holder.binding.imageHome.setBackgroundResource(data!![holder.adapterPosition].image)
     }
 
