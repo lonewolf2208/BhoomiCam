@@ -11,6 +11,7 @@ import android.os.Build
 import android.os.Bundle
 import android.os.Looper
 import android.provider.Settings
+import android.util.Log
 import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -48,8 +49,7 @@ class MapActivity : AppCompatActivity(),OnMapReadyCallback {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_map2)
 
-        supportMapFragment =
-            supportFragmentManager.findFragmentById(R.id.google_map) as SupportMapFragment
+        supportMapFragment = supportFragmentManager.findFragmentById(R.id.google_map) as SupportMapFragment
         mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
         // Async map
         findViewById<Button>(R.id.button14).setOnClickListener {
@@ -72,17 +72,21 @@ class MapActivity : AppCompatActivity(),OnMapReadyCallback {
                 // FusedLocationClient
                 // object
 
-                mFusedLocationClient!!.lastLocation.addOnCompleteListener { task ->
-                    val location: Location = task.result
-                    lifecycleScope.launch {
-                        var datastore=Datastore(this@MapActivity)
-                        datastore.saveUserDetails("latitude",location.latitude.toString())
-                        datastore.saveUserDetails("longitude",location.longitude.toString())
+                mFusedLocationClient!!.lastLocation.addOnSuccessListener { task ->
+//                    Log.d("sad",task.result.toString())
+                    if (task != null) {
+                        val location: Location = task
+                        lifecycleScope.launch {
+                            var datastore = Datastore(this@MapActivity)
+                            datastore.saveUserDetails("latitude", location.latitude.toString())
+                            datastore.saveUserDetails("longitude", location.longitude.toString())
+
+                        }
+
+                        latitudeTextView = location.latitude.toString() + ""
+                        longitTextView = location.longitude.toString() + ""
 
                     }
-
-                    latitudeTextView = location.latitude.toString() + ""
-                    longitTextView = location.longitude.toString() + ""
                     supportMapFragment.getMapAsync(this@MapActivity)
                 }
             } else {
